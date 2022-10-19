@@ -12,7 +12,7 @@
  * @size: Size specifier
  * Return: Number of chars printed
  */
-int pri0nt_char(va_list args, char buffer[], int flags, int width, int precision, int size)
+int print_char(va_list args, char buffer[], int flags, int width, int precision, int size)
 {
     char c = va_arg(args, int);
 
