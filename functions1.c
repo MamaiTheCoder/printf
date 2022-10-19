@@ -2,8 +2,7 @@
 
 /**
  * print_unsigned - Prints an unsigned number
- *
- * @types: List a of arguments
+ * @args: List a of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width
@@ -12,10 +11,10 @@
  *
  * Return: Number of chars printed.
  */
-int print_unsigned(va_list types, char buffer[], int flags, int width, int precision, int size)
+int print_unsigned(va_list args, char buffer[], int flags, int width, int precision, int size)
 {
 	int i = BUFF_SIZE - 2;
-	unsigned long int num = va_arg(types, unsigned long int);
+	unsigned long int num = va_arg(args, unsigned long int);
 
 	num = convert_size_unsgnd(num, size);
 	if (num == 0)
@@ -34,8 +33,7 @@ int print_unsigned(va_list types, char buffer[], int flags, int width, int preci
 
 /**
  * print_octal - Prints an unsigned number in octal notation
- *
- * @types: Lista of arguments
+ * @args: List of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width
@@ -44,10 +42,10 @@ int print_unsigned(va_list types, char buffer[], int flags, int width, int preci
  *
  * Return: Number of chars printed
  */
-int print_octal(va_list types, char buffer[], int flags, int width, int precision, int size)
+int print_octal(va_list args, char buffer[], int flags, int width, int precision, int size)
 {
 	int i = BUFF_SIZE - 2;
-	unsigned long int num = va_arg(types, unsigned long int);
+	unsigned long int num = va_arg(args, unsigned long int);
 	unsigned long int init_num = num;
 
 	UNUSED(width);
